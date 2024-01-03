@@ -26,7 +26,7 @@ A blank URL takes us to our JS-app
 """
 
 
-# @app.get("/", tags=["Root"], include_in_schema=False)
-# async def index():
-#     return RedirectResponse("/jsapp/index.html")
+@app.get("/", tags=["Root"], include_in_schema=False)
+async def index():
+    return RedirectResponse("/jsapp/index.html")
 

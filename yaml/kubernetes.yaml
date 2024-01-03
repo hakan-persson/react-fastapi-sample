@@ -97,19 +97,19 @@ spec:
                 name: react-fastapi-sample
                 port:
                   number: 8000
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: "sample-test-connection"
-spec:
-  containers:
-    - name: wget
-      image: busybox
-      command: ['wget']
-      args: ['react-fastapi-sample:8000']
-      resources:
-        limits:
-          memory: "128Mi"
-          cpu: "300m"
-  restartPolicy: Never
+# ---
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: "sample-test-connection"
+# spec:
+#   containers:
+#     - name: wget
+#       image: busybox
+#       command: ['wget']
+#       args: ['react-fastapi-sample:8000']
+#       resources:
+#         limits:
+#           memory: "128Mi"
+#           cpu: "300m"
+#   restartPolicy: Never
