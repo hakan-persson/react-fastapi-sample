@@ -18,11 +18,10 @@ FROM python:3.11-slim
 WORKDIR /usr/src/app
 ENV TZ="Europe/Stockholm"
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY pyapp/requirements.txt ./
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 COPY --from=build /jsapp/out ./jsapp/out
-# COPY static ./static
 COPY pyapp/ ./
 
 EXPOSE 8000
