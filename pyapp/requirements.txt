@@ -1,4 +1,4 @@
-fastapi>=0.108,<0.109
+fastapi>=0.108,<0.110
 uvicorn[standard]>=0.25,<0.28
 pydantic-settings>=2.1,<2.2
 # authlib>=1.2,<1.3
